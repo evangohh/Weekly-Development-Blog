@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Weekly Dev Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Weekly Dev Blog</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">About</a></li>
+							<li><a href = "Week1.html">Week 1</a></li>
+							<li><a href = "Week2.html">Week 2</a></li>
+							<li><a href = "Week3.html">Week 3</a></li>
+							<li><a href = "Week4.html">Week 4</a></li>
+							<li><a href = "Week5.html">Week 5</a></li>
+							<li><a href = "Week6.html">Week 6</a></li>
+							<li><a href = "Week7.html">Week 7</a></li>
+							<li><a href = "Week8.html">Week 8</a></li>
+							<li><a href = "Week9.html">Week 9</a></li>
+							<li><a href = "Week12.html">Week 12</a></li>
+							<li><a href = "Week13.html">Week 13</a></li>
+							<li><a href = "Week14.html">Week 14</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+            <!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Week 4</h1>
+							<span class="image main"><img src="images/responsive images and sp.png" alt="" /></span>
+                            <p>Responsive images and Split UI</p>
+							<p>
+                                <b>Responsive Images:</b>
+                                Responsive images are a web design technique that ensures images adapt to different screen sizes and resolutions, providing an optimal viewing experience on various devices.
+                            </p>
+                            <p><b>What are some methods for responsive images?</b><br><u>HTML Attributes:</u> Using attributes like srcset and sizes in the HTML &lt;img&gt; tag to provide multiple image sources based on device characteristics.
+                                <br><u>CSS Techniques:</u> Using CSS styles to set the maximum width of images and make them scale proportionally with the container.<br></p>
+
+                        
+							<p><b>Split UI (User Interface):</b>
+                                Split UI refers to a design approach where the user interface is divided into distinct sections or panes, often horizontally or vertically.<br>Split UI is commonly used to display multiple pieces of content or functionalities side by side, 
+                                allowing users to interact with different aspects of an application simultaneously.</p>
+                            <p>During this class I also learnt about simple flex images as you can see below.<br>It is also responsive when moved to mobile view.</p>
+                            <body>
+                                <div class="image-row">
+                                    <style>
+                                    
+                                        .image-row {
+                                          display: flex;
+                                          flex-wrap: wrap;
+                                        }
+                                    
+                                        .image-row img {
+                                         max-width: 100%; /* Make images responsive */
+                                         height: 275px; /* Allow the height to adjust to maintain aspect ratio */
+                                         aspect-ratio: 1 / 1;
+                                         margin-right: 10px;
+                                         border: 10px solid #ccc;
+                                         box-sizing: border-box;
+                                        }
+                                        @media screen and (max-width: 600px) {
+                                        .image-row img {
+                                            width: 100%; /* Full width for images on smaller screens */
+                                            margin: 0 0 10px 0; }}
+                                      </style>
+                                  <img src="images/brocoli.jpg" alt="Image 1">
+                                  <img src="images/duck.jpg" alt="Image 2">
+                                  <img src="images/banana.jpg" alt="Image 3">
+                                </div>
+                              </body>
+                            
+                          
+						</div>
+					</div>
+                                  <!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
