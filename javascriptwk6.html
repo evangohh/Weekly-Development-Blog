@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive DOM Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button {
+      display: block; /* Display buttons as block elements */
+      margin: 10px auto; /* Center buttons and add margin between them */
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #changeColorButton {
+      background-color: #3498db; /* Change color for better visibility */
+      color: #fff;
+    }
+
+    #goBackButton {
+      background-color: #2ecc71; /* Change color for better visibility */
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Responsive DOM Example</h1>
+  <p>Click the button to change the background color.</p>
+
+  <button id="changeColorButton" class="button">Change Color</button>
+  <button id="goBackButton" class="button">Go Back to Week 6</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Wait for the DOM to be fully loaded before executing the script
+
+      // Get the button element by its id
+      const button = document.getElementById('changeColorButton');
+
+      // Add a click event listener to the button
+      button.addEventListener('click', function() {
+        // Change the background color of the body on button click
+        document.body.style.backgroundColor = getRandomColor();
+      });
+
+      // Get the goBackButton element by its id
+      const goBackButton = document.getElementById('goBackButton');
+
+      // Add a click event listener to the goBackButton
+      goBackButton.addEventListener('click', function() {
+        // Navigate back to the main page
+        window.location.href = 'Week6.html';
+      });
+
+      // Function to generate a random color
+      function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    });
+  </script>
+</body>
+</html>
+
