@@ -10,7 +10,6 @@
       text-align: center;
       margin: 0;
       padding: 20px;
-      transition: background-color 0.3s ease;
     }
 
     button {
@@ -34,21 +33,18 @@
       // Get the button element by its id
       const button = document.getElementById('myButton');
 
+      // Array of random words
+      const randomWords = ['apple', 'banana', 'cherry', 'dog', 'elephant', 'flower', 'guitar', 'happy', 'internet', 'jazz'];
+
       // Add a click event listener to the button
       button.addEventListener('click', function() {
-        // Code to be executed when the button is clicked
-        document.body.style.backgroundColor = getRandomColor();
-      });
+        // Get a random word from the array
+        const randomIndex = Math.floor(Math.random() * randomWords.length);
+        const randomWord = randomWords[randomIndex];
 
-      // Function to generate a random color
-      function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-      }
+        // Display the random word
+        alert('Random Word: ' + randomWord);
+      });
 
     });
   </script>
