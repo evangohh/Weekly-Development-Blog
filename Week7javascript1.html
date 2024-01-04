@@ -26,17 +26,21 @@
   <!-- Button with ID 'myButton' -->
   <button id="myButton">Click Me!</button>
 
+  <!-- Button to go back -->
+  <button id="goBackButton">Go Back</button>
+
   <script>
     // Wait for the DOM to be fully loaded before executing the script
     document.addEventListener('DOMContentLoaded', function() {
 
-      // Get the button element by its id
+      // Get the button elements by their ids
       const button = document.getElementById('myButton');
+      const goBackButton = document.getElementById('goBackButton');
 
       // Array of random words
       const randomWords = ['apple', 'banana', 'cherry', 'dog', 'elephant', 'flower', 'guitar', 'happy', 'internet', 'jazz'];
 
-      // Add a click event listener to the button
+      // Add a click event listener to the "Click Me" button
       button.addEventListener('click', function() {
         // Get a random word from the array
         const randomIndex = Math.floor(Math.random() * randomWords.length);
@@ -44,6 +48,12 @@
 
         // Display the random word
         alert('Random Word: ' + randomWord);
+      });
+
+      // Add a click event listener to the "Go Back" button
+      goBackButton.addEventListener('click', function() {
+        // Go back to the previous page
+        window.location.href = 'Week7.html';
       });
 
     });
