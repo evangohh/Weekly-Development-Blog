@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Listener Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,8 +37,18 @@
       // Add a click event listener to the button
       button.addEventListener('click', function() {
         // Code to be executed when the button is clicked
-        console.log('Button Clicked!');
+        document.body.style.backgroundColor = getRandomColor();
       });
+
+      // Function to generate a random color
+      function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
 
     });
   </script>
