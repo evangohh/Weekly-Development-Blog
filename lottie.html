@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lottie Animation Example</title>
+  <style>
+    /* Add any additional CSS styles here */
+    #animation-container {
+      width: 200px;
+      height: 200px;
+    }
+/* Style the Go Back button */
+.goback-button {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+    <!-- Go Back Button -->
+    <button class="goback-button" onclick="goBack()">Go Back</button>
+
+    <!-- JavaScript function to go back to Week14.html -->
+    <script>
+      function goBack() {
+        window.location.href = 'Week14.html';
+      }
+    </script>
+  <div id="animation-container"></div>
+
+  <!-- Include the Lottie library -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/04ac5d7d-aadc-4666-86a2-2ccd96fa18fa/HR121l4QdN.json" background="#ffffff" speed="1" style="width: fit-content; height: fit-content" loop controls autoplay direction="1" mode="normal"></lottie-player>
+
+  <script>
+    // Load the animation
+    const animationContainer = document.getElementById('animation-container');
+    const animationData = {
+      container: animationContainer,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets7.lottiefiles.com/packages/lf20_xfag2rdx.json' // Example Lottie animation URL
+    };
+    const anim = lottie.loadAnimation(animationData);
+  </script>
+</body>
+</html>
